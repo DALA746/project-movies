@@ -1,35 +1,27 @@
-.details-overall {
-  /* position: absolute; */
-  display: flex;
-  align-items: flex-end;
-  margin-left: 32px;
-}
-
 .info {
   color: white;
   padding-bottom: 20px;
 }
 
-
 .background-container {
-  background-position: center;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 47px;
 }
 
 h2 {
   font-size: 30px;
   font-weight: normal;
-  margin-left: 32px;
-  margin-bottom: 10px;
 }
 
 h4 {
   font-style: italic;
-  margin-left: 32px;
 }
 
 h5 {
-  margin-left: 32px;
+  margin: 0;
 }
 
 .detail-rating {
@@ -40,35 +32,35 @@ h5 {
   font-size: 12px;
   font-weight: 700;
   line-height: 1.5;
-  padding: 5px;
-  margin-left: 32px;
+  padding: 4px;
 }
-
 
 .overview {
   font-size: 14px;
   color: white;
-  margin-left: 32px;
+}
+
+.poster-container {
+  width: 100%;
+  max-width: 511px;
 }
 
 .poster {
-  margin-top: 50px;
-  margin-left: 32px;
-  border-radius: 0px;
-  background: #e0e0e0;
-  box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;
+  width: 100%;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px white;
 }
 
 .details {
   font-size: 14px;
-  margin-left: 32px;
+  width: 100%;
+  max-width: 511px;
+}
+
+.button-container {
+  padding: 20px;
 }
 
 .back-button {
-  position: absolute;
-  left: 80px;
-  top:82px;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -84,46 +76,12 @@ h5 {
 
 .back-button-text:hover {
   font-size: 20px;
-  transform: translate(10px,0);
-  transition: all .3s ease-in-out;
+  transform: translate(10px, 0);
+  transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 768px) {
-
-  .details-overall {
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-  }
-
-  .poster {
-    display: flex;
-  }
-
+@media screen and (min-width: 768px) {
   .background-container {
-    background-position: center;
-    padding: 20px;
-    background-image: cover;
-    
+    flex-direction: row;
   }
-
-  .overview {
-    max-width: 500px;
-  }
-
-}
-
-@media (min-width: 1024px) {
-  .overview p {
-    font-size: 25px;
-  }
-
-  .h1 {
-    font-size: 35px;
-  }
-
-  .overview {
-    max-width: 500px;
-  }
-
 }
